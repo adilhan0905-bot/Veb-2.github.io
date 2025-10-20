@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>страница Рахимова</title>
+    <style>
+    body {
+        background-image: url('itotal.jpg'); /* Путь к изображению */
+        background-size: cover; /* Масштабирование изображения */
+        background-repeat: no-repeat; /* Запрет повторения изображения */
+        background-position: center; /* Центрирование изображения */
+    }
+</style>
+</head>
+<body>
+    <h1>страница Рахимова Адильхана ПИ23</h1>
+    <ul>
+        <!-- 1) абсолютная гиперссылка на главную страницу сайта kubsu.ru -->
+        </li><a href="https://kubsu.ru">Главная страница сайта КубГУ</a></li>
+        <!-- 2) абсолютная на главную сайта kubsu.ru в протоколе https -->
+        <li><a href="https://kubsu.ru">Главная страница сайта kubsu.ru (https)</a></li>
+        <!-- 3) ссылка-изображение -->
+        <li><a href="https://kubsu.ru"><img src="i.jpg" alt="Изображение" width="200"></a></li>
+        <!-- 4) сокращенная ссылка на внутреннюю страницу -->
+        <li><a href="https://707.su/oGKD">сокращенная ссылку на внутреннюю страницу</a></li>
+        <!-- 5) сокращенная ссылка на главную страницу -->
+        <li><a href="https://707.su/M9uR">сокращенная ссылку на главную страницу</a></li>
+        <!-- 6) ссылка на фрагмент текущей страницы -->
+        <li><a href="#section4">Раздел 4</a></li>
+        <!-- 7) ссылка с тремя параметрами в URL -->
+        <li><a href="https://kubsu.ru?param1=value1¶m2=value2¶m3=value3">Ссылка с тремя параметрами</a></li>
+        <!-- 8) ссылка с параметром id в URL -->
+        <li><a href="https://kubsu.ru?id=123">Ссылка с id</a></li>
+        <!-- 9) относительная на страницу в текущем каталоге -->
+        <li><a href="index1.html">Страница в текущем каталоге</a></li>
+        <!-- 10) относительная на страницу в каталоге about -->
+        <li><a href="about/index1.html">Страница в каталоге about</a></li>
+        <!-- 11) относительная на страницу в каталоге уровнем выше текущего -->
+        <li><a href="../index1.html">Страница в каталоге уровнем выше</a></li>
+        <!-- 12) относительная на страницу в каталоге двумя уровнями выше -->
+        <li><a href="../../index1.html">Страница в каталоге двумя уровнями выше</a></li>
+        <!-- 13) контекстная в тексте абзаца -->
+        <li>Это <a href="https://kubsu.ru">контекстная ссылка</a> в тексте абзаца.</li>
+        <!-- 14) ссылка на фрагмент страницы стороннего сайта -->
+        <li><a href="https://example.com#section">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <!-- 15) ссылки из прямоугольных и круглых областей картинки (HTML-тег map) -->
+        <li>
+            <img src="iexmaple.jpg" width="200" usemap="#image-map" alt="Изображение с картой ссылок">
+<map name="image-map">
+    <area shape="rect" coords="0,0,100,100" href="https://kubsu.ru" alt="Прямоугольная область">
+    <area shape="circle" coords="200,200,50" href="https://kubsu.ru" alt="Круглая область">
+</map>
+        </li>
+        <!-- 16) ссылка с пустым href -->
+        <a href="">ссылка с пустым href</a>
+        <!-- 17) ссылка без href -->
+        <li><a>Ссылка без href</a></li>
+        <!-- 18) ссылка, по которой запрещен переход поисковикам -->
+        <li><a href="https://example.com" rel="nofollow">Ссылка с nofollow</a></li>
+        <!-- 19) запрещенная для индексации поисковиками -->
+        <li><a href="https://example.com" rel="noindex">Ссылка с noindex</a></li>
+        <!-- 20) нумерованный список ссылок с подписями title -->
+        <ol>
+            <li><a href="https://example.com" title="Ссылка 1">Ссылка 1</a></li>
+            <li><a href="https://example.com" title="Ссылка 2">Ссылка 2</a></li>
+            <li><a href="https://example.com" title="Ссылка 3">Ссылка 3</a></li>
+        </ol>
+        <!-- 21) ссылка на файл на сервере FTP с авторизацией -->
+        <li><a href="ftp://username:password@example.com/file.txt">Ссылка на файл на FTP</a></li>
+    </ul>
+
+    <!-- Форма -->
+    <form action="/submit" method="post">
+        <!-- 1) ФИО (текстовое поле) -->
+        <label for="fullName">ФИО:</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+        <!-- 2) Телефон (поле tel) -->
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        <!-- 3) e-mail (поле email) -->
+        <label for="email">e-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <!-- 4) дата рождения (поле даты) -->
+        <label for="birthDate">Дата рождения:</label>
+        <input type="date" id="birthDate" name="birthDate" required><br><br>
+        <!-- 5) пол (радиокнопки) -->
+        <label>Пол:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Мужской</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Женский</label><br><br>
+        <!-- 6) любимый язык программирования (множественный выбор из списка) -->
+        <label for="programmingLanguages">Любимый язык программирования:</label>
+        <select id="programmingLanguages" name="programmingLanguages" multiple>
+            <option value="pascal">Pascal</option>
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="haskell">Haskell</option>
+            <option value="clojure">Clojure</option>
+            <option value="prolog">Prolog</option>
+            <option value="scala">Scala</option>
+        </select><br><br>
+        <!-- 7) биография (многострочное текстовое поле) -->
+        <label for="biography">Биография:</label>
+        <textarea id="biography" name="biography" rows="4" cols="50" required></textarea><br><br>
+        <!-- 8) с контрактом ознакомлен (а) (чекбокс) -->
+        <input type="checkbox" id="contract" name="contract" required>
+        <label for="contract">С контрактом ознакомлен(а)</label><br><br>
+        <!-- 9) кнопка «Сохранить» -->
+        <input type="submit" value="Сохранить">
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Ссылка меню 1</a></li>
+                <li><a href="#">Ссылка 2</a></li>
+                <li><a href="#">Ссылка 3</a></li>
+            </ul>
+        </nav>
+        <h1>Сайт Рахимова Адильхана</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Логотип</h2>
+            <img src="logo.png" alt="Логотип">
+        </section>
+        <section>
+            <h2>Подвал</h2>
+            <p>Подвал сайта</p>
+        </section>
+        <section>
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li><a href="#">Ссылка 1</a></li>
+                <li><a href="#">Ссылка 2</a></li>
+                <li><a href="#">Ссылка 3</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Таблица</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Заголовок 1</th>
+                        <th>Заголовок 2</th>
+                        <th>Заголовок 3</th>
+                        <th>Заголовок 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ячейка 1</td>
+                        <td>Ячейка 2</td>
+                        <td>Ячейка 3</td>
+                        <td>Ячейка 4</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 5</td>
+                        <td>Ячейка 6</td>
+                        <td>Ячейка 7</td>
+                        <td>Ячейка 8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Форма</h2>
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <input type="submit" value="Отправить">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© Рахимов Адильхан</p>
+    </footer>
+</body>
+</html>
